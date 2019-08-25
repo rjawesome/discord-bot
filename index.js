@@ -4,6 +4,9 @@ const client = new Discord.Client()
 var line1 = [" |", " |", " |"];
 var line2 = [" |", " |", " |"];
 var line3 = [" |", " |", " |"];
+var inbetween = "-------"
+var header = "1 2 3"
+var started = false;
 
 //When the bot starts
 client.on('ready', () => {
@@ -31,12 +34,20 @@ client.login('NjEyODA5MzUxODUzMzc1NTIy.XVohmg.F0xLVVFp9w8LUEpJbz6rZkG3ytg')
 
 function tictactoe (msg) {
   if (msg.content === 'start') {
-    line1 = ["| ", "| ", "| ", "|"];
-    line2 = ["| ", "| ", "| ", "|"];
-    line3 = ["| ", "| ", "| ", "|"];
-    msg.channel.send(line1[0] + line1[1] + line1[2] + line1[3])
-    msg.channel.send(line2[0] + line2[1] + line2[2] + line1[3])
-    msg.channel.send(line2[0] + line2[1] + line3[2] + line1[3])
+    line1 = ["A ", "| ", "| ", "| ", "|"];
+    line2 = ["A ", "| ", "| ", "| ", "|"];
+    line3 = ["A ", "| ", "| ", "| ", "|"];
+    msg.channel.send(header)
+    msg.channel.send(line1[0] + line1[1] + line1[2] + line1[3] + line1[4])
+    msg.channel.send(inbetween)
+    msg.channel.send(line2[0] + line2[1] + line2[2] + line2[3] + line2[4])
+    msg.channel.send(inbetween)
+    msg.channel.send(line2[0] + line2[1] + line3[2] + line3[3] + line3[4])
+    msg.channel.send(inbetween)
+    msg.channel.send("Player 1, please take your turn (send message in format '[letter][number]' ex. A1 or B3 ")
+  }
+  else if (started == false) {
+
   }
 }
 

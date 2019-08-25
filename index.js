@@ -1,6 +1,9 @@
 //Initialize Discord Client
 const Discord = require('discord.js')
 const client = new Discord.Client()
+var line1 = [" |", " |", " |"];
+var line2 = [" |", " |", " |"];
+var line3 = [" |", " |", " |"];
 
 //When the bot starts
 client.on('ready', () => {
@@ -28,7 +31,12 @@ client.login('NjEyODA5MzUxODUzMzc1NTIy.XVohmg.F0xLVVFp9w8LUEpJbz6rZkG3ytg')
 
 function tictactoe (msg) {
   if (msg.content === 'start') {
-    
+    line1 = [" |", " |", " |"];
+    line2 = [" |", " |", " |"];
+    line3 = [" |", " |", " |"];
+    msg.channel.send(line1[0] + line1[1] + line1[2])
+    msg.channel.send(line2[0] + line2[1] + line2[2])
+    msg.channel.send(line2[0] + line2[1] + line3[2])
   }
 }
 

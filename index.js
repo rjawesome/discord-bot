@@ -27,7 +27,9 @@ client.on('message', msg => {
 client.login('NjEyODA5MzUxODUzMzc1NTIy.XVohmg.F0xLVVFp9w8LUEpJbz6rZkG3ytg')
 
 function tictactoe (msg) {
-
+  if (msg.content === 'start') {
+    
+  }
 }
 
 function search (msg) {
